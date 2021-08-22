@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+<div class="container" style="width: 50%">
+	<strong><h2 class="text-center">Query results:</h2></strong>
+
+	<div class="card mt-3 p-3">
+		<strong><h3>Input:</h3></strong>
+		<em><h4>{{ text }}</h4></em>
+	</div>
+
+	<div class="card mt-1 p-3">
+		<strong><h3>Thruthness:</h3></strong>
+		<em><h4>{{ truthness }}%</h4></em>
+	</div>
+
+	<div class="card mt-1 p-3">
+		<strong><h3>Related articles:</h3></strong>	
+	    	<ol>
+		    {% for post in related_articles %}
+	    		<li><a href="https://google.com/?q={{ post.title }}">{{ post.title }}</a> ({{ post.date }}) - {{ post.similarity }}% similarity.</li>
+			{% endfor %}
+	    	</ol>
+	</div>
+</div>
+
+{% endblock content %}

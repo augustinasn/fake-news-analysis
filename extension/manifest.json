@@ -1,0 +1,20 @@
+{
+
+  "description": "Adds a button to the toolbar that when clicked evalutes the thruthness of the selected text (fake news detection).",
+  "manifest_version": 2,
+  "name": "rockit-nrd-fake-news-radar",
+  "version": "1.0",
+  "homepage_url": "https://github.com/augustinasn",
+  "icons": {
+    "48": "icons/page-48.png"
+  },
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "browser_action": {
+    "default_icon": "icons/page-32.png"
+  }
+
+}
